@@ -1,2 +1,4 @@
 # BookBot
-Boot.Dev Course making a Text Analysis program
+
+BookBot is my first [Boot.dev](https://www.boot.dev) project!
+
