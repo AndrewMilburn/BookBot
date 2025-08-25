@@ -12,8 +12,10 @@ def print_report(book_path, word_count, chars_sorted):
     print(f"Found {word_count} total words")
     print("--------- Character Count -------")
     for item in chars_sorted:
-        if item['char'].isalpha():
+        if item['char'].isprintable():
             print(f"{item['char']}: {item['count']}")
+        else:
+            print(f"NPC has AXII value: {ord(item['char'])}: {item['count']}")
     print("============= END ===============")
 
 
