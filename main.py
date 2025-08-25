@@ -35,6 +35,7 @@ def main():
 #    print(f"{word_count} words found in the document")
 #    print(f"Characters in Book: {char_count}")
     print_report(path_to_file, word_count, chars_sorted)
+    count_bigrams(book)
 
 
 main()

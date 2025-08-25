@@ -22,3 +22,8 @@ def sort_chars(char_dict):
     characters.sort(reverse=True, key=sort_on)
     return characters
 
+def count_bigrams(text):
+    bigrams_count = {}
+    for b in range(0, len(text)):
+        bigram = text.lower()[b:b+2]
+        print(bigram)
