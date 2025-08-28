@@ -1,0 +1,35 @@
+
+def count_words(text):
+    words = len(text.split())
+    return(words)
+
+def count_chars(text):
+    chars_count = {}
+    for char in text.lower():
+        if char in chars_count:
+            chars_count[char] += 1
+        else:
+            chars_count[char] = 1
+    return chars_count
+
+def sort_on(letters):
+    return letters["count"]
+
+def sort_chars(char_dict):
+    characters = []
+    for item in char_dict:
+        characters.append({"char":item, "count":char_dict[item]})
+    characters.sort(reverse=True, key=sort_on)
+    return characters
+
+def count_bigrams(text):
+    bigrams_count = {}
+    for b in range(0, len(text)):
+        if text.lower()[b] != " " and text.lower()[b+1] != " ":
+            bigram = text.lower()[b:b+2]
+            if bigram in bigrams_count:
+                bigrams_count[bigram] += 1
+            else:
+                bigrams_count[bigram] = 1
+    print(bigrams_count)
+    return bigrams_count

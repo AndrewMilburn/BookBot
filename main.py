@@ -16,7 +16,7 @@ def print_report(book_path, word_count, chars_sorted):
             print(f"{item['char']}: {item['count']}")
         else:
             print(f"NPC has AXII value: {ord(item['char'])}: {item['count']}")
-    print("============= END ===============")
+    print("============= BIGRAMS ===============")
 
 
             
@@ -35,7 +35,8 @@ def main():
 #    print(f"{word_count} words found in the document")
 #    print(f"Characters in Book: {char_count}")
     print_report(path_to_file, word_count, chars_sorted)
-    count_bigrams(book)
+    print(count_bigrams(book.lower()))
+#    count_bigrams_quickly(book.lower())
 
 
 main()
